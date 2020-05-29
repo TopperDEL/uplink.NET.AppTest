@@ -34,7 +34,9 @@ namespace uplink.NET.AppTest
 
         private async void OnButtonClick(object sender, RoutedEventArgs e)
         {
-            using (var access = new uplink.NET.Models.Access("YOUR_SATELLITE_URL", "YOUR_API_KEY", "YOUR_SECRET"))
+            using (var access = new uplink.NET.Models.Access("YOUR_SATELLITE_URL",
+                                                             "YOUR_API_KEY",
+                                                             "YOUR_SECRET")) //0
             {
                 //Create the bucket
                 var bucketService = new uplink.NET.Services.BucketService(access); //1
@@ -43,18 +45,22 @@ namespace uplink.NET.AppTest
                 //Upload some bytes
                 var bytesToUpload = Encoding.UTF8.GetBytes("Storj is awesome, isn't it?");
                 var objectService = new uplink.NET.Services.ObjectService(access); //3
-                var uploadOperation = await objectService.UploadObjectAsync(bucket, "test.txt", new UploadOptions(), bytesToUpload, false); //4
+                var uploadOperation = await objectService.UploadObjectAsync(bucket, "test.txt",
+                                                                            new UploadOptions(),
+                                                                            bytesToUpload, false); //4
                 await uploadOperation.StartUploadAsync(); //5
 
                 //List the bucket-content
-                var bucketContent = await objectService.ListObjectsAsync(bucket, new ListObjectsOptions() { Recursive = true }); //6
+                var bucketContent = await objectService.ListObjectsAsync(bucket, 
+                                                                         new ListObjectsOptions() { Recursive = true }); //6
                 foreach (var item in bucketContent.Items)
                 {
                     await ShowMessageAsync("Found item: " + item.Key);
                 }
 
                 //Download some bytes
-                var downloadOperation = await objectService.DownloadObjectAsync(bucket, "test.txt", new DownloadOptions(), false); //6
+                var downloadOperation = await objectService.DownloadObjectAsync(bucket, "test.txt",
+                                                                                new DownloadOptions(), false); //6
                 await downloadOperation.StartDownloadAsync(); //7
 
                 //Verify the bytes
