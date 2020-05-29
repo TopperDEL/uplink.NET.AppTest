@@ -1,4 +1,2 @@
 # uplink.NET.AppTest
-Test-App for uplink.Net-Wrapper on Uno-Platform
-
-More to come soon...
+This is a simple Test-Application developed with the Uno-Platform to connect to the storj-network cross-platform from Windows, Android, iOs and MacOS. A more in-depth explanation will follow soon as a blog-post. Stay tuned!
