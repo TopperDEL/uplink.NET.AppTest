@@ -68,9 +68,7 @@ namespace uplink.NET.AppTest
                 Windows.UI.Xaml.Window.Current.Content = rootFrame;
             }
 
-#if WINDOWS_UWP
             uplink.NET.Models.Access.SetTempDirectory(System.IO.Path.GetTempPath());
-#endif
 
             if (e.PrelaunchActivated == false)
             {
