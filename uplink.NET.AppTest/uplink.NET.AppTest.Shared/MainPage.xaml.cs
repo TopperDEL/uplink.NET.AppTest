@@ -26,6 +26,7 @@ namespace uplink.NET.AppTest
         {
             this.InitializeComponent();
             var version = uplink.NET.Models.Access.GetStorjVersion();
+            storjVersion.Text = version;
         }
     }
 }
