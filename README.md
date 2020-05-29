@@ -1,2 +1,2 @@
 # uplink.NET.AppTest
-This is a simple Test-Application developed with the Uno-Platform to connect to the storj-network cross-platform from Windows, Android, iOs and MacOS. A more in-depth explanation will follow soon as a blog-post. Stay tuned!
+This is a simple Test-Application developed with the [Uno-Platform](https://platform.uno) to connect to the [storj-network](https://storj.io) cross-platform from Windows, Android, iOs and MacOS. A more in-depth explanation will follow soon as a blog-post. It is using the uplink.NET-library you can find [here on github](https://github.com/topperdel/uplink.net) and [here on nuget](https://www.nuget.org/packages/uplink.NET/). Stay tuned!
