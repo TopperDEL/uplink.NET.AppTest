@@ -26,6 +26,7 @@ namespace uplink.NET.AppTest.Droid
 			: base(() => new App(), javaReference, transfer)
 		{
 			ConfigureUniversalImageLoader();
+			uplink.NET.Models.Access.SetTempDirectory(CacheDir.AbsolutePath);
 		}
 
 		private void ConfigureUniversalImageLoader()

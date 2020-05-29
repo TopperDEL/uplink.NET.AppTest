@@ -11,6 +11,7 @@
         <StackPanel>
             <TextBlock Text="Hello, Storj-world!" Margin="20" FontSize="30" />
             <TextBlock x:Name="storjVersion" Margin="20" FontSize="30" />
+            <Button Content="Start the future" Click="OnButtonClick"/>
         </StackPanel>
     </Grid>
 </Page>
